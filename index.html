@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body> 
+    <!--button to trigger feedback modal component-->
+    <div class="button">
+        <button>Share feedback</button>
+    </div>
+    <!--feedback modal component-->
+    <div class="modal">
+        <div class="close">&times;</div>
+        <div> 
+            <h1>How likely are you to recommend FrontendPro <br>to someone you know?</h1>
+        </div>
+        <!--below is rating scale buttons-->
+        <div class="ratings">
+            
+              <button>1</button>
+               <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <button>6</button>
+              <button>7</button>
+              <button>8</button>
+              <button>9</button>
+              <button>10</button>
+            
+        </div>
+        <div class="strength">
+            <h3>Not likely at all</h3>
+            <h3>Extremely likely</h3>
+        </div>
+        <div class="btn">
+            <button class="cancel">Cancel</button>
+            <button class="submit">Submit</button>
+        </div>
+    </div>
+
+</body>
+<!--bellow is  a javascript code-->
+<script type="text/javascript">
+    const btn=document.querySelector('.button');
+    btn.addEventListener('click',(e)=>{
+        e.preventDefault();
+        document.querySelector('.modal').classList.add('active');
+    })
+    /* above code enables feedback modal component when send feedback button ids clicked*/
+    const remove=document.querySelector('.modal .cancel');
+    remove.addEventListener('click',(e)=>{
+        e.preventDefault();
+        document.querySelector('.modal').classList.remove('active');
+    })
+    const move=document.querySelector('.modal .close');
+    move.addEventListener('click',(e)=>{
+        e.preventDefault();
+        document.querySelector('.modal').classList.remove('active');
+    })
+    const submit=document.querySelector('.modal .submit');
+    submit.addEventListener('click',(e)=>{
+        e.preventDefault();
+        document.querySelector('.modal').classList.remove('active');
+    })
+    /*const modal=document.querySelector('.modal');
+    modal.addEventListener('click',(e)=>{
+        e.preventDefault();
+        if(!modal.contains(e.target)){
+            document.querySelector('.modal').classList.remove('active');
+        }
+        
+    })*/
+    
+</script>
+</html>
